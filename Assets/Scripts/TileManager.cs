@@ -5,7 +5,11 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
 
-    public GameObject[] tilesPrefabs;
+    public GameObject[] tilesNonFatalPrefabs;
+    public GameObject[] tilesEasyPrefabs;
+    public GameObject[] tilesMediumPrefabs;
+    public GameObject[] tilesHardPrefabs;
+
 
     public State state;
     private Transform playerTransform;
@@ -20,7 +24,7 @@ public class TileManager : MonoBehaviour
     
     
     //todo: ile ich musi być
-    private int tilesCount = 5;
+    private int tilesCount = 14;
     
     private List<GameObject> tiles;
     private int lastPrefab = 0;
@@ -32,7 +36,12 @@ public class TileManager : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         for (int i = 0; i < tilesCount; i++)
         {
-            SpawnTile();
+            if(i<5)
+            SpawnTile(randomPrefabIndex(0), 0);
+            else
+            {
+                SpawnTile(randomPrefabIndex(state.difficulty),state.difficulty);
+            }
         }
  
         
@@ -43,7 +52,8 @@ public class TileManager : MonoBehaviour
     {
         if (playerTransform.position.z -safeZone> (spawnZ - tilesCount * tileLength))
         {
-            SpawnTile(randomPrefabIndex());
+           
+            SpawnTile(randomPrefabIndex(state.difficulty),state.difficulty);
             DeleteTile();
         }
     }
@@ -54,25 +64,43 @@ public class TileManager : MonoBehaviour
         tiles.RemoveAt(0);
     }
 
-    private void SpawnTile(int prefabIndex =-1)
+    private GameObject[] tileset(int difficulty)
     {
-        if(prefabIndex ==-1)
-        prefabIndex = randomPrefabIndex();
-        
+        switch (difficulty)
+        {
+            default:
+                Debug.Log("bad difficulty");
+                return tilesNonFatalPrefabs;
+            case 0:
+                return tilesNonFatalPrefabs;
+            case 1:
+                return tilesEasyPrefabs;
+            case 2:
+                return tilesMediumPrefabs;
+            case 3:
+                return tilesHardPrefabs;
+        }
+
+    }
+
+    private void SpawnTile(int prefabIndex ,int difficulty)
+    {        
+       
         GameObject go;
-        go = Instantiate(tilesPrefabs[prefabIndex]) as GameObject;
+        go = Instantiate(tileset(difficulty)[prefabIndex]);
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
         spawnZ += tileLength;
         tiles.Add(go);
     }
 
-    private int randomPrefabIndex()
+    private int randomPrefabIndex(int difficulty)
     {
-        if (tilesPrefabs.Length <= 1)
+        int len = tileset(difficulty).Length;
+        if (len <= 1)
             return 0;
         
-        int randomIndex = Random.Range(0, tilesPrefabs.Length-1);
+        int randomIndex = Random.Range(0, len-1);
 
         if (randomIndex < lastPrefab)
         {

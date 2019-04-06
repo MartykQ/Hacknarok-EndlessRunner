@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class State : MonoBehaviour
 {
 
-    public int difficulty =0;
+    public int difficulty =1;
     public int score =0 ;
 
     public int current_biome =0 ;
@@ -31,6 +31,7 @@ public class State : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString()+":"+difficulty.ToString();
+        
     }
 }

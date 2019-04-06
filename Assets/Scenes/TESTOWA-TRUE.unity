@@ -141,12 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee33e7a165e4b96bb0c0c5e5e8cfa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 0
+  difficulty: 1
   score: 0
   current_biome: 0
   isDead: 0
   animDur: 2
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 479089907}
 --- !u!4 &90229926
 Transform:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171408743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.94, z: 0.19}
+  m_LocalPosition: {x: 0, y: 2.36, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -288,6 +288,40 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc86f529cbdbb05ba82890449be92226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
@@ -477,11 +511,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9572a2d9fc8ad29ebf7e0ed0a45e619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilesPrefabs:
+  tilesNonFatalPrefabs:
+  - {fileID: 1093712338889712723, guid: 2408c35355970b2469c643f26dfb542b, type: 3}
+  tilesEasyPrefabs:
   - {fileID: 2392113563326776362, guid: 9d3f70ced499ea44f910f193f5de5ab3, type: 3}
-  - {fileID: 2568797266709616924, guid: 3a5744f5b34109a439efede638bfa717, type: 3}
-  - {fileID: 3563406557073282754, guid: 8138725cc077c4b41a18747adf2d70d5, type: 3}
-  state: {fileID: 0}
+  - {fileID: 2564632086808208058, guid: e4dac72e03fc2224bad6424b4ced0d85, type: 3}
+  - {fileID: 7682140250931373078, guid: 123bcc5cfef7dfa45b2d9e52de44de37, type: 3}
+  - {fileID: 6483728304766364509, guid: 52c8114a484171e4ba66fc98eb6566c5, type: 3}
+  tilesMediumPrefabs:
+  - {fileID: 3664708024777857993, guid: 24bc94e8f17b1d641bfddfde7a7dbae7, type: 3}
+  - {fileID: 8464689157134769624, guid: ff08fe457f325f843bdbd5492d83231c, type: 3}
+  - {fileID: 945200794428682732, guid: ab74ed0c6a22cfa448d775bc844c5d70, type: 3}
+  tilesHardPrefabs:
+  - {fileID: 5931911637935018929, guid: b4af7637343acf046b25b6635cb0c03b, type: 3}
+  - {fileID: 3103573551766376089, guid: efdb96f92242ce74292f8058ba75a1ba, type: 3}
+  - {fileID: 6364859987830568090, guid: 07c6bad7f68049e478ffe421b9953396, type: 3}
+  state: {fileID: 90229925}
 --- !u!4 &679784072
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +753,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842035498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.44, z: -3.8799992}
+  m_LocalPosition: {x: 0, y: 2.86, z: -3.8799992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -845,7 +890,7 @@ PrefabInstance:
     - target: {fileID: 3857214769785577645, guid: f092f696cad6a7bd68e4a7cde347c834,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.94
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 3857214769785577645, guid: f092f696cad6a7bd68e4a7cde347c834,
         type: 3}

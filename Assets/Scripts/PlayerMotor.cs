@@ -13,7 +13,7 @@ public class PlayerMotor : MonoBehaviour
     
     private float getVelocity()
     {
-        return  4+2f * (Time.time/6.0f);
+        return 4; //2f * (Time.time/6.0f);
     }
 
 
@@ -75,5 +75,11 @@ public class PlayerMotor : MonoBehaviour
             state.score += 1;
             last_point_dist = controller.transform.position.z;
         }
+    }
+
+    void OnCollisionEnter ()
+    {
+        Debug.Log("asdasd");
+
     }
 }
