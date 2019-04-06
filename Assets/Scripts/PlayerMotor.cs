@@ -8,9 +8,11 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController controller;
 
-    private float velocity = 5;
+    private float velocity = 2;
     private float verticalVelocity = 0;
     private float gravity=2.0f;
+    private float animDur = 2.0f;
+
 
 
     private Vector3 moveVector;
@@ -24,6 +26,15 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
 
+        if (Time.time < animDur)
+        {
+            moveVector = Vector3.zero;
+            moveVector.z = velocity;
+            controller.Move(moveVector * Time.deltaTime);
+            return;
+        }
+        
+        
         if (controller.isGrounded)
         {
             verticalVelocity = 0;
@@ -36,7 +47,7 @@ public class PlayerMotor : MonoBehaviour
         moveVector = Vector3.zero;
         moveVector.z = velocity;
         moveVector.y = verticalVelocity;
-        moveVector.x=Input.GetAxisRaw("Horizontal");
+        moveVector.x=2.0f*Input.GetAxisRaw("Horizontal");
         
         controller.Move(moveVector * Time.deltaTime);
     }
