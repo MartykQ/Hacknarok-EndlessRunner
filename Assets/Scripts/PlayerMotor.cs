@@ -77,9 +77,15 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter ()
+    void OnControllerColliderHit (ControllerColliderHit info)
     {
-        Debug.Log("asdasd");
+        Debug.Log(info.collider.tag);
+        switch (info.collider.tag)
+        {
+            case "OBS":
+                state.isDead = true;
+            break;
+        }
 
     }
 }
