@@ -8,7 +8,15 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController controller;
 
-    private float velocity = 5;
+
+    public State state;
+    
+    private float getVelocity()
+    {
+        return  4+2f * (Time.time/6.0f);
+    }
+
+
     private float verticalVelocity = 0;
     private float gravity=2.0f;
     private float animDur = 2.0f;
@@ -16,6 +24,10 @@ public class PlayerMotor : MonoBehaviour
 
 
     private Vector3 moveVector;
+
+    private float last_point_dist = 0.0f;
+    private float dist_per_point = 3.0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +38,18 @@ public class PlayerMotor : MonoBehaviour
     void Update()
     {
 
-        if (Time.time < animDur)
-        {
-            moveVector = Vector3.zero;
-            moveVector.z = velocity;
-            controller.Move(moveVector * Time.deltaTime);
-            return;
-        }
-        
+//        if (Time.time < animDur)
+//        {
+//            moveVector = Vector3.zero;
+//            moveVector.z = velocity;
+//            controller.Move(moveVector * Time.deltaTime);
+//            return;
+//        }
+//        
+        if(state.isDead)
+            return; //todo: death logic
+
+        getPoints();
         
         if (controller.isGrounded)
         {
@@ -45,10 +61,19 @@ public class PlayerMotor : MonoBehaviour
         }
 
         moveVector = Vector3.zero;
-        moveVector.z = velocity;
+        moveVector.z = getVelocity();
         moveVector.y = verticalVelocity;
-        moveVector.x=2.0f*Input.GetAxisRaw("Horizontal");
+        moveVector.x=4.0f*Input.GetAxisRaw("Horizontal");
         
         controller.Move(moveVector * Time.deltaTime);
+    }
+
+    void getPoints()
+    {
+        if (controller.transform.position.z - last_point_dist > dist_per_point)
+        {
+            state.score += 1;
+            last_point_dist = controller.transform.position.z;
+        }
     }
 }
