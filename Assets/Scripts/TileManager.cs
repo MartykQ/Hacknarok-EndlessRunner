@@ -7,11 +7,21 @@ public class TileManager : MonoBehaviour
 
     public GameObject[] tilesPrefabs;
 
+    public State state;
     private Transform playerTransform;
-    private float spawnZ = -10.0f;
+    
+    
+    
+    private float spawnZ = -13.0f;
+    
     private float tileLength = 10.0f;
+    
     private float safeZone = 6f+10.0f;
+    
+    
+    //todo: ile ich musi być
     private int tilesCount = 5;
+    
     private List<GameObject> tiles;
     private int lastPrefab = 0;
     
@@ -61,12 +71,18 @@ public class TileManager : MonoBehaviour
     {
         if (tilesPrefabs.Length <= 1)
             return 0;
-        int randomIndex = lastPrefab;
-        while (randomIndex == lastPrefab)
-        {
-            randomIndex = Random.Range(0, tilesPrefabs.Length);
-        }
+        
+        int randomIndex = Random.Range(0, tilesPrefabs.Length-1);
 
-        return randomIndex;
+        if (randomIndex < lastPrefab)
+        {
+            lastPrefab = randomIndex;
+            return randomIndex;
+        }
+       
+        lastPrefab = randomIndex + 1;
+        return randomIndex + 1;
+        
+
     }
 }
