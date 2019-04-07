@@ -8,6 +8,7 @@ public class PlayerMotor : MonoBehaviour
 {
     private CharacterController controller;
 
+    public DeathMenu deathMenu;
 
     public State state;
     
@@ -38,16 +39,21 @@ public class PlayerMotor : MonoBehaviour
     {
         state.distance = controller.transform.position.z;
 
-//        if (Time.time < animDur)
-//        {
-//            moveVector = Vector3.zero;
-//            moveVector.z = velocity;
-//            controller.Move(moveVector * Time.deltaTime);
-//            return;
-//        }
-//        
-        if(state.isDead)
-            return; //todo: death logic
+        //        if (Time.time < animDur)
+        //        {
+        //            moveVector = Vector3.zero;
+        //            moveVector.z = velocity;
+        //            controller.Move(moveVector * Time.deltaTime);
+        //            return;
+        //        }
+        //        
+        if (state.isDead)
+        {
+            deathMenu.ToggleMenu();
+
+        }
+
+
 
         getPoints();
         
