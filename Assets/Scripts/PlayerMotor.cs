@@ -19,7 +19,6 @@ public class PlayerMotor : MonoBehaviour
 
     private float verticalVelocity = 0;
     private float gravity=2.0f;
-    private float animDur = 2.0f;
 
 
 
@@ -61,10 +60,14 @@ public class PlayerMotor : MonoBehaviour
             verticalVelocity -=gravity;
         }
 
+        
         moveVector = Vector3.zero;
         moveVector.z = getVelocity();
         moveVector.y = verticalVelocity;
-        moveVector.x=5.0f*Input.GetAxisRaw("Horizontal");
+        
+        
+        if(state.transition>=1.0f)
+            moveVector.x=5.0f*Input.GetAxisRaw("Horizontal");
         
         controller.Move(moveVector * Time.deltaTime);
     }

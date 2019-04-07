@@ -14,8 +14,9 @@ public class State : MonoBehaviour
     //BUFF ARRay
 
     public bool isDead = false;
-    
-    
+
+
+    public float transition = 0;
     public float animDur = 2.0f;
 
 
@@ -31,7 +32,12 @@ public class State : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {
+        if (Time.time < animDur)
+            transition = Time.time / animDur;
+        else
+            transition = 1.0f;
+        
         scoreText.text = "Debug "+score.ToString()+" : "+difficulty.ToString()+" : "+Mathf.Round(distance)+"m ";
         if (score > 100)
         {
