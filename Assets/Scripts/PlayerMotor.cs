@@ -13,7 +13,7 @@ public class PlayerMotor : MonoBehaviour
     
     private float getVelocity()
     {
-        return 4; //2f * (Time.time/6.0f);
+        return 4 + 2f * (Time.time/6.0f);
     }
 
 
@@ -63,7 +63,7 @@ public class PlayerMotor : MonoBehaviour
         moveVector = Vector3.zero;
         moveVector.z = getVelocity();
         moveVector.y = verticalVelocity;
-        moveVector.x=4.0f*Input.GetAxisRaw("Horizontal");
+        moveVector.x=5.0f*Input.GetAxisRaw("Horizontal");
         
         controller.Move(moveVector * Time.deltaTime);
     }

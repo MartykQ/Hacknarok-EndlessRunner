@@ -32,6 +32,9 @@ public class State : MonoBehaviour
     void Update()
     {       
         scoreText.text = score.ToString()+":"+difficulty.ToString();
-        
+        if (score > 100)
+        {
+            difficulty = 2;
+        }
     }
 }

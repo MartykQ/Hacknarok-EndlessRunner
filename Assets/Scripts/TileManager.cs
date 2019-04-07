@@ -47,13 +47,19 @@ public class TileManager : MonoBehaviour
         
     }
 
+    private bool t = false;
     // Update is called once per frame
     void Update()
     {
+
         if (playerTransform.position.z -safeZone> (spawnZ - tilesCount * tileLength))
         {
-           
-            SpawnTile(randomPrefabIndex(state.difficulty),state.difficulty);
+
+            int diff = state.difficulty;
+            if (t)
+                diff = 0;
+            t = !t;
+            SpawnTile(randomPrefabIndex(diff),diff);
             DeleteTile();
         }
     }
