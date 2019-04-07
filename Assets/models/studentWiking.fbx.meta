@@ -1,16 +1,67 @@
 fileFormatVersion: 2
-guid: 71d58d9857090ba429f6dc7904c10823
+guid: 44b616748dcf3174d8f53cfabb06836d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: None__ballTexture
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere
-    7400000: Default Take
+    100000: chest
+    100002: Cube
+    100004: foot.L
+    100006: foot.L_end
+    100008: foot.R
+    100010: foot.R_end
+    100012: forearm.L
+    100014: forearm.R
+    100016: hand.L
+    100018: hand.L_end
+    100020: hand.R
+    100022: hand.R_end
+    100024: head
+    100026: head_end
+    100028: hips
+    100030: metarig
+    100032: neck
+    100034: shin.L
+    100036: shin.R
+    100038: shoulder.L
+    100040: shoulder.R
+    100042: spine
+    100044: //RootNode
+    100046: thigh.L
+    100048: thigh.R
+    100050: upper_arm.L
+    100052: upper_arm.R
+    400000: chest
+    400002: Cube
+    400004: foot.L
+    400006: foot.L_end
+    400008: foot.R
+    400010: foot.R_end
+    400012: forearm.L
+    400014: forearm.R
+    400016: hand.L
+    400018: hand.L_end
+    400020: hand.R
+    400022: hand.R_end
+    400024: head
+    400026: head_end
+    400028: hips
+    400030: metarig
+    400032: neck
+    400034: shin.L
+    400036: shin.R
+    400038: shoulder.L
+    400040: shoulder.R
+    400042: spine
+    400044: //RootNode
+    400046: thigh.L
+    400048: thigh.R
+    400050: upper_arm.L
+    400052: upper_arm.R
+    2100000: Material.002
+    4300000: Cube
+    7400000: metarig|run
     9500000: //RootNode
+    13700000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -63,7 +114,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
