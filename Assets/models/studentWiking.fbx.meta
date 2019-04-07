@@ -1,14 +1,10 @@
 fileFormatVersion: 2
-guid: 023e045c00cd14a4db6eda98b168d561
+guid: ba0148653ef592f7ab050f62e519f91a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.001
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
