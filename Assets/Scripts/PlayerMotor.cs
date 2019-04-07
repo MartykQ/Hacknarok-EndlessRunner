@@ -13,7 +13,7 @@ public class PlayerMotor : MonoBehaviour
     
     private float getVelocity()
     {
-        return 4; //2f * (Time.time/6.0f);
+        return 4 + 2f * (Time.time/6.0f);
     }
 
 
@@ -37,6 +37,7 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        state.distance = controller.transform.position.z;
 
 //        if (Time.time < animDur)
 //        {
@@ -63,7 +64,7 @@ public class PlayerMotor : MonoBehaviour
         moveVector = Vector3.zero;
         moveVector.z = getVelocity();
         moveVector.y = verticalVelocity;
-        moveVector.x=4.0f*Input.GetAxisRaw("Horizontal");
+        moveVector.x=5.0f*Input.GetAxisRaw("Horizontal");
         
         controller.Move(moveVector * Time.deltaTime);
     }
@@ -77,14 +78,28 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider info)
+    {
+        switch (info.tag)
+        {
+            
+            case "Lotek":
+                state.score+=4;
+                Destroy(info.gameObject);
+                break;
+           
+        }
+    }
+
     void OnControllerColliderHit (ControllerColliderHit info)
     {
-        Debug.Log(info.collider.tag);
+//        Debug.Log(info.collider.tag);
         switch (info.collider.tag)
         {
             case "OBS":
                 state.isDead = true;
             break;
+            
         }
 
     }
