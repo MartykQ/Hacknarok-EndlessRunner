@@ -145,8 +145,10 @@ MonoBehaviour:
   score: 0
   current_biome: 0
   isDead: 0
+  transition: 0
   animDur: 2
   scoreText: {fileID: 479089907}
+  distance: 0
 --- !u!4 &90229926
 Transform:
   m_ObjectHideFlags: 0
@@ -724,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19592c1435f4af4d8815a22fca3b1e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 90229925}
 --- !u!1 &1009254655
 GameObject:
   m_ObjectHideFlags: 0

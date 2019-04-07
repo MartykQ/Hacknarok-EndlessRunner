@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,7 +42,8 @@ public class State : MonoBehaviour
         scoreText.text = "Debug "+score.ToString()+" : "+difficulty.ToString()+" : "+Mathf.Round(distance)+"m ";
         if (score > 100)
         {
-            difficulty = score/100;//todo better - this WILL crash
+            difficulty = Math.Min(score/100,3);//todo better - this WILL crash
+            
         }
     }
 }
