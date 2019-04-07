@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class State : MonoBehaviour
 {
 
-    public int difficulty =0;
+    public int difficulty =1;
     public int score =0 ;
 
     public int current_biome =0 ;
@@ -14,13 +14,15 @@ public class State : MonoBehaviour
     //BUFF ARRay
 
     public bool isDead = false;
-    
-    
+
+
+    public float transition = 0;
     public float animDur = 2.0f;
 
 
     public Text scoreText;
 
+    public float distance;
     
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,16 @@ public class State : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
-        scoreText.text = score.ToString();
+    {
+        if (Time.time < animDur)
+            transition = Time.time / animDur;
+        else
+            transition = 1.0f;
+        
+        scoreText.text = "Debug "+score.ToString()+" : "+difficulty.ToString()+" : "+Mathf.Round(distance)+"m ";
+        if (score > 100)
+        {
+            difficulty = score/100;//todo better - this WILL crash
+        }
     }
 }
