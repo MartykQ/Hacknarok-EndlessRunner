@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 44b616748dcf3174d8f53cfabb06836d
 ModelImporter:
   serializedVersion: 23
@@ -62,6 +63,15 @@ ModelImporter:
     7400000: metarig|run
     9500000: //RootNode
     13700000: Cube
+=======
+guid: ba0148653ef592f7ab050f62e519f91a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2186277476908879412: ImportLogs
+>>>>>>> 4a1ede4fd1f3e23b6215307497b524ebe5dd7173
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -114,8 +124,13 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+<<<<<<< HEAD
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
+=======
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>> 4a1ede4fd1f3e23b6215307497b524ebe5dd7173
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -142,7 +157,11 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< HEAD
   animationType: 2
+=======
+  animationType: 0
+>>>>>>> 4a1ede4fd1f3e23b6215307497b524ebe5dd7173
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
