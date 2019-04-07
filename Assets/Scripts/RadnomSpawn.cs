@@ -5,15 +5,23 @@ using UnityEngine;
 public class RadnomSpawn : MonoBehaviour
 {
 
-
-    public Transform spawnerCords;
+    public float probability;
+    public GameObject collect2;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("asd");
-        Debug.Log(spawnerCords.position.x);
         
+        Debug.Log(collect2);
+        float lotto = Random.Range(0, 1);
+
+ 
+            GameObject go;
+            go = (Instantiate(collect2)) as GameObject;
+            go.transform.position = transform.position;
+      
+
+
     }
 
     // Update is called once per frame
@@ -21,4 +29,6 @@ public class RadnomSpawn : MonoBehaviour
     {
         
     }
+
+    
 }
