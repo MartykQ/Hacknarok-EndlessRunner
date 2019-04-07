@@ -15,4 +15,12 @@ public class CollectPick : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.name == "Player")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
