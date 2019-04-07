@@ -34,7 +34,7 @@ public class CameraMotor : MonoBehaviour
         else
         {
             transform.position = Vector3.Lerp(moveVector + animationOffset, moveVector, state.transition);
-            transform.LookAt(lookAt.position+Vector3.up);
+            //transform.LookAt(lookAt.position+Vector3.up);
         }
     }
 }

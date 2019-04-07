@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
@@ -26,5 +27,10 @@ public class DeathMenu : MonoBehaviour
     {
         scoreText.text = stateInfo.score.ToString();
         gameObject.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("TESTOWA-TRUE");
     }
 }

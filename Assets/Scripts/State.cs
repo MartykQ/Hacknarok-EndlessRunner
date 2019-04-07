@@ -35,11 +35,11 @@ public class State : MonoBehaviour
     void Update()
     {
         if (Time.time < animDur)
-            transition = Time.time / animDur;
+            transition+= Time.deltaTime / animDur;
         else
             transition = 1.0f;
         
-        scoreText.text = "Debug "+score.ToString()+" : "+difficulty.ToString()+" : "+Mathf.Round(distance)+"m ";
+        scoreText.text =score.ToString();
         if (score > 100)
         {
             difficulty = Math.Min(score/100,3);//todo better - this WILL crash

@@ -50,6 +50,7 @@ public class PlayerMotor : MonoBehaviour
         if (state.isDead)
         {
             deathMenu.ToggleMenu();
+            return;
 
         }
 

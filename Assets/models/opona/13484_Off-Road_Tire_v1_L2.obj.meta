@@ -1,15 +1,22 @@
 fileFormatVersion: 2
-guid: 023e045c00cd14a4db6eda98b168d561
+guid: 8922b8dc2da158a4f8d18e23f79e006b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: 13484_Off_road_Tire_Disk
+    100004: 13484_Off_road_Tire_rubber
     400000: //RootNode
-    2100000: Material.001
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Sphere
-    2186277476908879412: ImportLogs
+    400002: 13484_Off_road_Tire_Disk
+    400004: 13484_Off_road_Tire_rubber
+    2100000: 13484_Off_road_Tire_Disk
+    2100002: 13484_Off_road_Tire_rubber
+    2300000: 13484_Off_road_Tire_Disk
+    2300002: 13484_Off_road_Tire_rubber
+    3300000: 13484_Off_road_Tire_Disk
+    3300002: 13484_Off_road_Tire_rubber
+    4300000: 13484_Off_road_Tire_Disk
+    4300002: 13484_Off_road_Tire_rubber
   externalObjects: {}
   materials:
     importMaterials: 1
