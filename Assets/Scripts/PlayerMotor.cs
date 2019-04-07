@@ -37,6 +37,7 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        state.distance = controller.transform.position.z;
 
 //        if (Time.time < animDur)
 //        {
@@ -77,14 +78,28 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider info)
+    {
+        switch (info.tag)
+        {
+            
+            case "Lotek":
+                state.score+=4;
+                Destroy(info.gameObject);
+                break;
+           
+        }
+    }
+
     void OnControllerColliderHit (ControllerColliderHit info)
     {
-        Debug.Log(info.collider.tag);
+//        Debug.Log(info.collider.tag);
         switch (info.collider.tag)
         {
             case "OBS":
                 state.isDead = true;
             break;
+            
         }
 
     }

@@ -467,10 +467,14 @@ MonoBehaviour:
   - {fileID: 2564632086808208058, guid: e4dac72e03fc2224bad6424b4ced0d85, type: 3}
   - {fileID: 7682140250931373078, guid: 123bcc5cfef7dfa45b2d9e52de44de37, type: 3}
   - {fileID: 6483728304766364509, guid: 52c8114a484171e4ba66fc98eb6566c5, type: 3}
+  - {fileID: 534308016071442335, guid: 04efb89fe8880264bb613e1817496ae6, type: 3}
+  - {fileID: 3559665054962498980, guid: 8708d78590f71f7428d29b21f4f66f93, type: 3}
+  - {fileID: 3755650097576392474, guid: 238a0cd7f591c844fb7950aeb33c1a06, type: 3}
   tilesMediumPrefabs:
   - {fileID: 3664708024777857993, guid: 24bc94e8f17b1d641bfddfde7a7dbae7, type: 3}
   - {fileID: 8464689157134769624, guid: ff08fe457f325f843bdbd5492d83231c, type: 3}
   - {fileID: 945200794428682732, guid: ab74ed0c6a22cfa448d775bc844c5d70, type: 3}
+  - {fileID: 8870522074017664032, guid: 864e3ca206c8bb14b86c69e63b5faa36, type: 3}
   tilesHardPrefabs:
   - {fileID: 5931911637935018929, guid: b4af7637343acf046b25b6635cb0c03b, type: 3}
   - {fileID: 3103573551766376089, guid: efdb96f92242ce74292f8058ba75a1ba, type: 3}

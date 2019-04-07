@@ -21,6 +21,7 @@ public class State : MonoBehaviour
 
     public Text scoreText;
 
+    public float distance;
     
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,10 @@ public class State : MonoBehaviour
     // Update is called once per frame
     void Update()
     {       
-        scoreText.text = score.ToString()+":"+difficulty.ToString();
+        scoreText.text = "Debug "+score.ToString()+" : "+difficulty.ToString()+" : "+Mathf.Round(distance)+"m ";
         if (score > 100)
         {
-            difficulty = 2;
+            difficulty = score/100;//todo better - this WILL crash
         }
     }
 }

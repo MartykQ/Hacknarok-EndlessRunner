@@ -15,12 +15,13 @@ public class CollectPick : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.name == "Player")
-        {
-            Destroy(gameObject);
-        }
-    }
+//
+//    private void OnTriggerEnter(Collider other)
+//    {
+//        Debug.Log(other.tag);
+//        if(other.name == "Player")
+//        {
+//            Destroy(gameObject);
+//        }
+//    }
 }
