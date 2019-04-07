@@ -11,14 +11,12 @@ public class RadnomSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(">>");
         Debug.Log(collect2);
         float lotto = Random.Range(0, 1);
-
- 
-            GameObject go;
-            go = (Instantiate(collect2)) as GameObject;
-            go.transform.position = transform.position;
+        GameObject go;
+        go = (Instantiate(collect2)) as GameObject;
+        go.transform.position = transform.position;
       
 
 

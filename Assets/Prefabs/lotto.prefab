@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 3400085027311929743}
   - component: {fileID: 817061351913143783}
   - component: {fileID: 3151860816600747391}
-  - component: {fileID: 2295077489991008840}
+  - component: {fileID: 8587654605429905390}
+  - component: {fileID: 7354976169497755411}
   m_Layer: 0
   m_Name: lotto
-  m_TagString: Respawn
+  m_TagString: Lotek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,16 +79,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2295077489991008840
-SphereCollider:
+--- !u!114 &8587654605429905390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8881800128441664207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac73712ee534d542a0fd787123b5f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7354976169497755411
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8881800128441664207}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
